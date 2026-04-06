@@ -2,6 +2,16 @@
   "groups": [
     {
       "group_id": "G1",
+      "theme": "Affordability and Subscription Concerns related to the limited features availabe for free",
+      "review_ids": [1, 25, 76, 100, 176, 226, 237, 239, 296, 331],
+      "example_reviews": [
+        "very insightful but needs a program for the financially inadequate its already tough to seek help let alone afford it",
+        "everything but the introduction is paywalled i do not need an app to notice what affects mood downloaded for the mental health resources but will use something that offers a chance to text the benefits before charging"
+      ]
+    },
+
+    {
+      "group_id": "G1",
       "theme": "Affordability and Subscription Concerns. Users report having features unaccessible using free version",
       "review_ids": ["rev_76"],
       "example_reviews": [
