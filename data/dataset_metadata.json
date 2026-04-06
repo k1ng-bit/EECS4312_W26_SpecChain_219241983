@@ -1,0 +1,11 @@
+{
+  "app_name": "MindDoc",
+  "dataset_size": 3500,
+  "collection_method": "google-play-scraper",
+  "cleaning_decisions": [
+    "lowercase",
+    "remove punctuation",
+    "remove duplicates",
+    "remove short reviews"
+  ]
+}
