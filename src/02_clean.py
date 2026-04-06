@@ -4,6 +4,7 @@
 
 import json
 import re
+import os
 
 def clean_text(text):
     text = text.lower()                         # change text to lowercase
