@@ -11,12 +11,42 @@
     },
 
     {
-      "group_id": "G1",
-      "theme": "Affordability and Subscription Concerns. Users report having features unaccessible using free version",
-      "review_ids": ["rev_76"],
+      "group_id": "G2",
+      "theme": "Performance and technical problems faced by users when accessing the application",
+      "review_ids": [40, 69, 85, 109, 206, 227, 229, 292, 361, 429],
       "example_reviews": [
-        "very insightful but needs a program for the financially inadequate its already tough to seek help let alone afford it",
-        "everything but the introduction is paywalled i do not need an app to notice what affects mood downloaded for the mental health resources but will use something that offers a chance to text the benefits before charging"
+        "working fine until last update wouldnt open the app",
+        "app is crashing"
+      ]
+    },
+    
+    {
+      "group_id": "G3",
+      "theme": "Mood tracking and monitoring emotion of the users",
+      "review_ids": [7, 32, 34, 65, 73, 128, 285, 311, 349, 525],
+      "example_reviews": [
+        "is very helpful to assess my mood and analyze worries ive been having devs team thanks",
+        "good pace good match for content x daily check in to track mood"
+      ]
+    }, 
+
+    {
+      "group_id": "G4",
+      "theme": "Privacy, accessibility, and usability concerns",
+      "review_ids": [19, 26, 33, 74, 78, 99, 151, 277, 278, 415],
+      "example_reviews": [
+        "tracking is an absolute no go with apps that handle data this sensitive",
+        "perhaps offering the shout text service number as well would be a good option"
+      ]
+    }, 
+
+    {
+      "group_id": "G5",
+      "theme": "User Stress and Anxiety management and support",
+      "review_ids": [10, 27, 45, 66, 91, 133, 154, 188, 208, 380],
+      "example_reviews": [
+        "so far it has helped me with stress so it really has been helpful i just dont want some halfdone therapy approach do far so good",
+        "very helpful thoughtful questions about my mental state its funny how just reflecting on and acknowledging my current mental state can bring calm"
       ]
     }
   ]}
