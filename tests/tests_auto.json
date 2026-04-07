@@ -2,14 +2,117 @@
   "tests": [
     {
       "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "requirement_id": "FR1",
+      "scenario": "Track emotions and moods",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Log in as a user",
+        "Navigate to the tracking section",
+        "Select and record current emotions and moods"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "Emotions and moods are recorded successfully"
+    },
+    {
+      "test_id": "T_auto_2",
+      "requirement_id": "FR2",
+      "scenario": "View summary of tracked emotions and moods",
+      "steps": [
+        "Log in as a user",
+        "Track emotions and moods over time",
+        "Navigate to the summary section",
+        "View graphical representation of tracked data"
+      ],
+      "expected_result": "Graphical representation of tracked data is displayed"
+    },
+    {
+      "test_id": "T_auto_3",
+      "requirement_id": "FR3",
+      "scenario": "Access premium features with subscription",
+      "steps": [
+        "Log in as a user with a subscription",
+        "Navigate to the premium features section",
+        "Verify access to all premium features"
+      ],
+      "expected_result": "All premium features are accessible without restrictions"
+    },
+    {
+      "test_id": "T_auto_4",
+      "requirement_id": "FR4",
+      "scenario": "Verify secure handling of user data",
+      "steps": [
+        "Log in as a user",
+        "Collect user data",
+        "Verify data encryption and storage in accordance with regulations"
+      ],
+      "expected_result": "User data is encrypted and stored securely"
+    },
+    {
+      "test_id": "T_auto_5",
+      "requirement_id": "FR5",
+      "scenario": "View personalized recommendations",
+      "steps": [
+        "Log in as a user",
+        "Track emotions and moods over time",
+        "Navigate to the recommendations section",
+        "View tailored suggestions for managing mental health"
+      ],
+      "expected_result": "Tailored suggestions for managing mental health are displayed"
+    },
+    {
+      "test_id": "T_auto_6",
+      "requirement_id": "FR6",
+      "scenario": "Set and track mental health goals",
+      "steps": [
+        "Log in as a user",
+        "Set a mental health goal",
+        "Navigate to the goal progress section",
+        "View progress towards achieving the goal"
+      ],
+      "expected_result": "Progress towards achieving the goal is displayed"
+    },
+    {
+      "test_id": "T_auto_7",
+      "requirement_id": "FR7",
+      "scenario": "Access resources and support",
+      "steps": [
+        "Log in as a user",
+        "Navigate to the resources section",
+        "Verify access to a list of relevant resources and support"
+      ],
+      "expected_result": "List of relevant resources and support is displayed"
+    },
+    {
+      "test_id": "T_auto_8",
+      "requirement_id": "FR8",
+      "scenario": "Handle technical issues and errors",
+      "steps": [
+        "Simulate a technical issue or error",
+        "Verify error message and redirection to support page"
+      ],
+      "expected_result": "Error message is displayed and user is redirected to support page"
+    },
+    {
+      "test_id": "T_auto_9",
+      "requirement_id": "FR9",
+      "scenario": "Customize experience with preferences",
+      "steps": [
+        "Log in as a user",
+        "Navigate to the preferences section",
+        "Make changes to preferences",
+        "Verify changes are saved and applied"
+      ],
+      "expected_result": "Changes to preferences are saved and applied"
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "FR10",
+      "scenario": "Export tracked data",
+      "steps": [
+        "Log in as a user",
+        "Track emotions and moods over time",
+        "Navigate to the export section",
+        "Export tracked data in a compatible format"
+      ],
+      "expected_result": "Tracked data is exported successfully in a compatible format"
     }
   ]
 }

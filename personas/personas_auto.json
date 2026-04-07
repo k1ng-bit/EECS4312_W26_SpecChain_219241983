@@ -1,0 +1,134 @@
+{
+  "personas": [
+    {
+      "id": "P1",
+      "name": "Engaged and Hopeful User",
+      "description": "A user who actively uses the app to track their mood and emotions, and finds it helpful in managing their mental health.",
+      "derived_from_group": "G1",
+      "goals": [
+        "to understand and manage their mental health",
+        "to track their emotions and moods"
+      ],
+      "pain_points": [
+        "limited free features",
+        "technical issues"
+      ],
+      "context": [
+        "has a mental health condition",
+        "is looking for a tool to help them manage their emotions"
+      ],
+      "constraints": [
+        "may not have a lot of money to spend on premium features",
+        "may experience technical issues"
+      ],
+      "evidence_reviews": [
+        506,
+        1100
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Frustrated Technical User",
+      "description": "A user who experiences technical issues with the app and is frustrated with the limitations of the free version.",
+      "derived_from_group": "G2",
+      "goals": [
+        "to use the app without technical issues",
+        "to access premium features without paying"
+      ],
+      "pain_points": [
+        "app crashes",
+        "limited free features"
+      ],
+      "context": [
+        "is tech-savvy",
+        "is frustrated with technical issues"
+      ],
+      "constraints": [
+        "may not have a lot of patience for technical issues",
+        "may not want to pay for premium features"
+      ],
+      "evidence_reviews": [
+        429,
+        3235
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Critical and Skeptical User",
+      "description": "A user who is skeptical of the app's ability to evaluate mental health and may not find it useful.",
+      "derived_from_group": "G5",
+      "goals": [
+        "to find a reliable and trustworthy mental health tool",
+        "to understand their mental health"
+      ],
+      "pain_points": [
+        "limited features",
+        "may not trust the app"
+      ],
+      "context": [
+        "may have had negative experiences with mental health tools",
+        "is skeptical of the app's claims"
+      ],
+      "constraints": [
+        "may not be willing to pay for premium features",
+        "may not trust the app"
+      ],
+      "evidence_reviews": [
+        1004,
+        147
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Mental Health Journeyer",
+      "description": "A user who is on a mental health journey and is using the app to track their emotions and moods.",
+      "derived_from_group": "G4",
+      "goals": [
+        "to understand and manage their mental health",
+        "to track their emotions and moods"
+      ],
+      "pain_points": [
+        "may experience technical issues",
+        "limited free features"
+      ],
+      "context": [
+        "is on a mental health journey",
+        "is looking for a tool to help them manage their emotions"
+      ],
+      "constraints": [
+        "may not have a lot of money to spend on premium features",
+        "may experience technical issues"
+      ],
+      "evidence_reviews": [
+        401,
+        1714
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Limited Feature Seeker",
+      "description": "A user who is looking for a mental health tool with more features and is limited by the app's free version.",
+      "derived_from_group": "G3",
+      "goals": [
+        "to find a mental health tool with more features",
+        "to understand their mental health"
+      ],
+      "pain_points": [
+        "limited features",
+        "may not trust the app"
+      ],
+      "context": [
+        "may have had negative experiences with mental health tools",
+        "is looking for a tool with more features"
+      ],
+      "constraints": [
+        "may not be willing to pay for premium features",
+        "may not trust the app"
+      ],
+      "evidence_reviews": [
+        117,
+        2886
+      ]
+    }
+  ]
+}
