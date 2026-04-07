@@ -2,15 +2,210 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_1",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Pricing appears before payment",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+       "Open a premium feature",
+       "View the premium information screen"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The subscription cost, billing period, and all information are shown before payment."
+    },
+    {
+      "test_id": "T_manual_2",
+      "requirement_id": "FR1",
+      "scenario": "Premium features are clearly identified",
+      "steps": [
+       "Open the app",
+       "Navigate to premium content"
+      ],
+      "expected_result": "Premium features can be clearly identified before any kind of payment is asked."
+    }, 
+    {
+      "test_id": "T_manual_3",
+      "requirement_id": "FR2",
+      "scenario": "Free user records a mood entry",
+      "steps": [
+        "Use a free account",
+        "Open mood tracking",
+        "Select a mood",
+        "Save the entry"
+      ],
+      "expected_result": "The free user is able to record and save a mood entry without subscribing."
+    }, 
+    {
+      "test_id": "T_manual_4",
+      "requirement_id": "FR2",
+      "scenario": "Mood tracking is usable without subscription",
+      "steps": [
+        "Open the app with a free account",
+        "Go to the mood tracking screen"
+      ],
+      "expected_result": "Basic mood tracking functionality is available without requiring payment."
+    },
+    {
+      "test_id": "T_manual_5",
+      "requirement_id": "FR3",
+      "scenario": "Submitted entry remains saved after reopening app",
+      "steps": [
+        "Create a mood or journal entry",
+        "Submit the entry",
+        "Close the app",
+        "Reopen the app"
+      ],
+      "expected_result": "The submitted entry remains available after reopening the app."
+    },
+    {
+      "test_id": "T_manual_6",
+      "requirement_id": "FR3",
+      "scenario": "Entry save process completes successfully",
+      "steps": [
+        "Create an entry",
+        "Submit the entry"
+      ],
+      "expected_result": "The entry is saved successfully without being lost."
+    },
+    {
+      "test_id": "T_manual_7",
+      "requirement_id": "FR4",
+      "scenario": "App launches successfully",
+      "steps": [
+        "Launch the application"
+      ],
+      "expected_result": "The app starts successfully and reaches the main screen without crashing."
+    },
+    {
+      "test_id": "T_manual_8",
+      "requirement_id": "FR4",
+      "scenario": "Main app screen loads after startup",
+      "steps": [
+        "Launch the application",
+        "Wait for startup to complete"
+      ],
+      "expected_result": "The app startsup successfully and remains usable."
+    },
+    {
+      "test_id": "T_manual_9",
+      "requirement_id": "FR5",
+      "scenario": "User records a daily mood entry",
+      "steps": [
+        "Open the mood checkin screen",
+        "Select a mood",
+        "Submit the entry"
+      ],
+      "expected_result": "The mood entry is saved with the date."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR5",
+      "scenario": "Mood check-in saves correctly",
+      "steps": [
+        "Open mood checkin",
+        "Answer the mood prompt",
+        "Save"
+      ],
+      "expected_result": "The selected mood is stored successfully as a daily mood entry."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR6",
+      "scenario": "Mood history appears in chronological order",
+      "steps": [
+        "Create mood entries on multiple dates",
+        "Open mood history"
+      ],
+      "expected_result": "Past entries appear in chronological order."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR6",
+      "scenario": "Previous mood records remain accessible",
+      "steps": [
+        "Open mood history",
+        "Navigate to older entries"
+      ],
+      "expected_result": "Older mood records remain accessible to the user."
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR7",
+      "scenario": "Privacy information is shown before signing up",
+      "steps": [
+        "Start the signup process",
+        "Continue until sensitive data is requested"
+      ],
+      "expected_result": "Privacy and data handling information are shown before signup takes place."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR7",
+      "scenario": "Data handling information is visible during signup",
+      "steps": [
+        "Open the app",
+        "Go to signup",
+        "Click data handling section"
+      ],
+      "expected_result": "The app displays data handling information before collecting sensitive data."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR8",
+      "scenario": "Support options include different communication methods",
+      "steps": [
+        "Open support options",
+        "Inspect available help methods"
+      ],
+      "expected_result": "At least one communication support option is available if configured."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR8",
+      "scenario": "Support options are clearly presented",
+      "steps": [
+        "Open the support section"
+      ],
+      "expected_result": "Help methods are presented clearly and can be accessed by the user."
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR9",
+      "scenario": "Guided support exercise is available",
+      "steps": [
+        "Open the app",
+        "Navigate to a support activity"
+      ],
+      "expected_result": "The user can open a guided exercise for stress or anxiety support."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR9",
+      "scenario": "Guided exercise includes clear instructions",
+      "steps": [
+        "Open a support activity",
+        "Start the activity"
+      ],
+      "expected_result": "The activity provides clear instructions and can be completed by users."
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR10",
+      "scenario": "User completes a structured checkin",
+      "steps": [
+        "Open the check-in screen",
+        "Answer the presented questions",
+        "Submit the checkin"
+      ],
+      "expected_result": "The user is able to complete the structured checkin."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR10",
+      "scenario": "Completed checkin is stored for later review",
+      "steps": [
+        "Complete a structured check-in",
+        "Open the review or history section"
+      ],
+      "expected_result": "The completed checkin is stored and available for later review."
     }
   ]
 }

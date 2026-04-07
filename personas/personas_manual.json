@@ -1,22 +1,108 @@
 {  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Budget-Conscious User John",
+      "description": "A user who wants mental health support but finds the subscription cost too high and the free version too limited.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Access meaningful mental health support at low cost",
+        "Understand the app before paying",
+        "Use helpful features without a full subscription"  ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Most useful features are locked behind a paywall",
+        "Subscription pricing feels too expensive"  ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Using the app while managing finances",
+        "Trying to evaluate whether the app is worth paying for"  ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "Must be able to use core features for free",
+        "Pricing should be clear before payment"  ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        1,
+        25      ]
+    }, 
+    {
+      "id": "P2",
+      "name": "Reliability-Focused User George",
+      "description": "A user who relies on the app but becomes frustrated when it crashes, has login issues, or missing notifications.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Use the app without crashes or bugs",
+        "Receive reminders consistently"      ],
+      "pain_points": [
+        "App crashes or fails to open",
+        "Notifications and saved entries are unreliable"     ],
+      "context": [
+        "Using the app as part of a daily mental health routine",
+        "Relying on reminders and saved logs to stay consistent"      ],
+      "constraints": [
+        "The app must save entries reliably",
+        "Core function screen must remain accessible"       ],
+      "evidence_reviews": [
+        40,
+        429    ]
+    },
+    {
+      "id": "P3",
+      "name": "Mood Tracker Alex",
+      "description": "A user who wants to log moods consistently and monitor emotional patterns over time.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Track mood regularly",
+        "Review emotional trends"
+      ],
+      "pain_points": [
+        "Needs clear access to mood history",
+        "Depends on reliable reminders and saved entries" ],
+      "context": [
+        "Using the app daily or several times a week",
+        "Reviewing mood data to understand emotional changes" ],
+      "constraints": [
+        "Mood history should remain accessible",
+        "Entries must be recorded with the correct date" ],
+      "evidence_reviews": [
+        32,
+        349 ]
+    },
+    {
+      "id": "P4",
+      "name": "Privacy-Aware and Security-Seeker Manny",
+      "description": "A user who is concerned about sensitive mental health data and usability during stressful situations.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Protect personal and mental health information",
+        "Use support options" ],
+      "pain_points": [
+        "Data sharing feels unsafe",
+        "Some support pathways are not accessible to all users" ],
+      "context": [
+        "Using the app while handling sensitive personal issues",
+        "Needing simple and accessible interactions during stress" ],
+      "constraints": [
+        "Privacy terms must be understandable",
+        "Support options should include accessible alternatives" ],
+      "evidence_reviews": [
+        19,
+        26 ]
+    },
+    {
+      "id": "P5",
+      "name": "Anxiety Support Seeker Claire",
+      "description": "A user dealing with anxiety, stress, or overwhelming emotions who uses the app for guidance, reflection, and emotional support.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Reduce anxiety and stress",
+        "Feel calmer and more grounded" ],
+      "pain_points": [
+        "Needs support during emotionally difficult moments",
+        "Wants guidance that feels relevant and comforting" ],
+      "context": [
+        "Using the app during stressful periods",
+        "Trying to manage anxiety without immediate professional support" ],
+      "constraints": [
+        "Support features must be easy to access",
+        "Check-ins should be clear and not overwhelming" ],
+      "evidence_reviews": [
+        10,
+        45 ]
+    } ] }
