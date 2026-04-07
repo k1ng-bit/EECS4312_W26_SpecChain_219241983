@@ -51,7 +51,7 @@ Return JSON ONLY in this exact schema:
   "tests": [
     {{
       "test_id": "T_auto_1",
-      "requirement_id": "FR1",
+      "requirement_id": "FR_auto_1",
       "scenario": "short scenario name",
       "steps": ["step 1", "step 2"],
       "expected_result": "expected result"

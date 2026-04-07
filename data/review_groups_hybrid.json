@@ -1,13 +1,53 @@
 {  "groups": [
     {
       "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "theme": "Positive Mood Tracking and Engaged Users",
+      "review_ids": [506, 863, 1024, 1298, 1813, 2282, 2457, 1100, 3026, 3093],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "daily self check in helps me be mindful of my thoughts and feelings i like the journal the insights and the resources for things like grounding ones self and managing anxiety i am not able to do checks in a day feels a bit much that the app is structured that way hence instead of stars",
+        "its a good app to track your emotions and mental health"
       ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
+      "notes": "Removed some of the review ids used to sample the group to make them more specific and traceable. Changed Examples as well to better relate to theme and edited theme name to be more accurate."
+    },
+    {
+      "group_id": "H2",
+      "theme": "Technical Issues and Frustrations",
+      "review_ids": [429, 3235, 2932, 3326, 562, 985, 2722, 2418, 198, 3297],
+      "example_reviews": [
+        "app completely stopped and was working just fine yesterday kinda frustrated eitherwise ive been using it for a long time and was great until now",
+        "app is crashing"
+      ],
+      "notes": "Removed unessecary review ids, and added different example reviews connected and related to the group theme"
+    },
+    {
+      "group_id": "H3",
+      "theme": "Limited Features and Monetization Concerns",
+      "review_ids": [117, 2886, 3350, 1231, 1004, 626, 124, 95, 970, 3451],
+      "example_reviews": [
+        "any decent features are locked and its just an ad for better health",
+        "complete waste of time you will not have anything useful after your subscription starts"
+      ],
+      "notes": "removed and updated unrelated review. Changed review id to be more theme relative. "
+    },
+    {
+      "group_id": "H4",
+      "theme": "Mental Health Improvement and Support",
+      "review_ids": [442, 682, 984, 1006, 562, 985, 1271, 2418, 198, 3297],
+      "example_reviews": [
+        "very helpful its a daily reminder of things you need to do to improve",
+        "its a great way to track my mental health amd help me improve"
+      ],
+      "notes": "Updated title for the group theme as G1 and G4 were too similar in nature. Revised review id and review examples."
+    },
+    {
+      "group_id": "H5",
+      "theme": "User Skepticism and credibility concerns",
+      "review_ids": [960, 1133, 1811, 2590, 3350, 2947, 124, 33],
+      "example_reviews": [
+        "buggy and not useful at all the insights are all stuff youve definitely already googled before ",
+        "your app does not take disabled people into account and they disproportionately suffer from mental illness "
+      ],
+      "notes": "Updated example reviews to better support theme, and changed some review ids."
     }
   ]
 }

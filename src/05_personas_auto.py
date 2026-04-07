@@ -88,7 +88,7 @@ Rules:
 {{
   "groups": [
     {{
-      "group_id": "G1",
+      "group_id": "A1",
       "theme": "short theme",
       "review_ids": [1, 2, 3],
       "example_reviews": [

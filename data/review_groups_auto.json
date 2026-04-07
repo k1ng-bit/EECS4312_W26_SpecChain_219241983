@@ -1,7 +1,7 @@
 {
   "groups": [
     {
-      "group_id": "G1",
+      "group_id": "A1",
       "theme": "Positive and Engaged Users",
       "review_ids": [
         506,
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "group_id": "G2",
+      "group_id": "A2",
       "theme": "Technical Issues and Frustrations",
       "review_ids": [
         429,
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "group_id": "G3",
+      "group_id": "A3",
       "theme": "Limited Features and Monetization Concerns",
       "review_ids": [
         117,
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "group_id": "G4",
+      "group_id": "A4",
       "theme": "Mental Health Journeys and Personal Growth",
       "review_ids": [
         506,
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "group_id": "G5",
+      "group_id": "A5",
       "theme": "Critical and Skeptical Perspectives",
       "review_ids": [
         1004,

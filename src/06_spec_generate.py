@@ -43,10 +43,10 @@ Using the personas below for the MindDoc app, generate exactly 10 functional req
 
 Follow this exact markdown format for each requirement:
 
-# Requirement ID: FR1
+# Requirement ID: FR_auto_1
 - Description: [The system shall ...]
 - Source Persona: [Persona Name]
-- Traceability: [Derived from review group G1]
+- Traceability: [Derived from review group A1]
 - Acceptance Criteria: [Given ... When ... Then ...]
 
 Rules:

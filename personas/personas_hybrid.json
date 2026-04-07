@@ -2,30 +2,137 @@
   "personas": [
     {
       "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
+      "name": "Consistent Mood Tracker",
+      "description": "A user who actively uses the app to track their mood and emotions, and finds it helpful in managing their mental health.",
       "derived_from_group": "H1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "track moods consistently",
+        "understand emotional patterns"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "needs reliable mood logging",
+        "wants clear insights from data"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "uses the app daily or frequently",
+        "relies on the app for reflection"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "data must be saved reliably",
+        "tracking should be easy and quick"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        506,
+        1100
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "notes": "Refined persona name and other information to match with the hybrid groups exactly."
+    }, 
+    {
+      "id": "P_hybrid_2",
+      "name": "Reliability focused User",
+      "description": "A user who depends on the app but becomes frustrated when technical issues arise.",
+      "derived_from_group": "H2",
+      "goals": [
+        "use the app without crashes",
+        "have consistent access to features"
+      ],
+      "pain_points": [
+        "app crashes or bugs",
+        "unreliable performance"
+      ],
+      "context": [
+        "uses the app regularly",
+        "expects stable functionality"
+      ],
+      "constraints": [
+        "app must function consistently",
+        "entries should not be lost"
+      ],
+      "evidence_reviews": [
+        429, 
+        3235
+      ],
+      "notes": "Changed persona name and some pain points to be more specific and have more explanation to make it more understandable."
+    },
+    {
+      "id": "P_hybrid_3",
+      "name": "Budget conscious User",
+      "description": "A user who wants to benefit from the app but is frustrated by paywalls and limited free features.",
+      "derived_from_group": "H3",
+      "goals": [
+        "access useful features for free",
+        "evaluate app value before paying"
+      ],
+      "pain_points": [
+        "important features locked behind subscription",
+        "free version feels limited"
+      ],
+      "context": [
+        "may avoid subscriptions",
+        "uses free digital tools for support"
+      ],
+      "constraints": [
+        "needs access to core features without paying",
+        "requires clear pricing information"
+      ],
+      "evidence_reviews": [
+        117,
+        2886
+        ],
+      "notes": "Changed persona to match more with the hybrid group it is representing. Changed and used specific paint points, goalls and constraints related to the theme."
+    },
+    {
+      "id": "P_hybrid_4",
+      "name": "Mental Health Support User",
+      "description": "A user who uses the app to improve emotional awareness and support their mental health journey.",
+      "derived_from_group": "H4",
+      "goals": [
+        "understand emotional state",
+        "improve mental well-being"
+      ],
+      "pain_points": [
+        "needs meaningful insights",
+        "wants helpful support tools"
+      ],
+      "context": [
+        "may be dealing with anxiety or depression",
+        "uses the app for reflection or support"
+      ],
+      "constraints": [
+        "insights should be useful and clear",
+        "features should support mental health improvement"
+      ],
+      "evidence_reviews": [401,
+       1714
+      ],
+      "notes": "Changed persona name to be more easy to understand and trace to group, removed any repeating sentences in goals, paint points or context that was not related to the persona."
+    },
+    {
+      "id": "P_hybrid_5",
+      "name": "Trust seeking User",
+      "description": "A user who is skeptical of the apps claims and concerned about trust or credibility.",
+      "derived_from_group": "H5",
+      "goals": [
+        "use a trustworthy mental health tool",
+        "understand how data is handled"
+      ],
+      "pain_points": [
+        "lack of trust in app recommendations",
+        "concerns about credibility"
+      ],
+      "context": [
+        "may have had negative experiences",
+        "evaluates apps critically"
+      ],
+      "constraints": [
+        "needs transparency in data handling",
+        "requires credible information"
+      ],
+      "evidence_reviews": [
+        1004, 
+        147
+        ],
+        "notes": "Chagned the persona name and details to match more with the hybrid group and clarified some points relating to the persona"
     }
   ]
 }

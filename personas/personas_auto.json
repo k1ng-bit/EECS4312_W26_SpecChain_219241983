@@ -4,7 +4,7 @@
       "id": "P1",
       "name": "Engaged and Hopeful User",
       "description": "A user who actively uses the app to track their mood and emotions, and finds it helpful in managing their mental health.",
-      "derived_from_group": "G1",
+      "derived_from_group": "A1",
       "goals": [
         "to understand and manage their mental health",
         "to track their emotions and moods"
@@ -30,7 +30,7 @@
       "id": "P2",
       "name": "Frustrated Technical User",
       "description": "A user who experiences technical issues with the app and is frustrated with the limitations of the free version.",
-      "derived_from_group": "G2",
+      "derived_from_group": "A2",
       "goals": [
         "to use the app without technical issues",
         "to access premium features without paying"
@@ -56,7 +56,7 @@
       "id": "P3",
       "name": "Critical and Skeptical User",
       "description": "A user who is skeptical of the app's ability to evaluate mental health and may not find it useful.",
-      "derived_from_group": "G5",
+      "derived_from_group": "A5",
       "goals": [
         "to find a reliable and trustworthy mental health tool",
         "to understand their mental health"
@@ -82,7 +82,7 @@
       "id": "P4",
       "name": "Mental Health Journeyer",
       "description": "A user who is on a mental health journey and is using the app to track their emotions and moods.",
-      "derived_from_group": "G4",
+      "derived_from_group": "A4",
       "goals": [
         "to understand and manage their mental health",
         "to track their emotions and moods"
