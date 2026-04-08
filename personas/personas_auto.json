@@ -108,7 +108,7 @@
       "id": "P5",
       "name": "Limited Feature Seeker",
       "description": "A user who is looking for a mental health tool with more features and is limited by the app's free version.",
-      "derived_from_group": "G3",
+      "derived_from_group": "A3",
       "goals": [
         "to find a mental health tool with more features",
         "to understand their mental health"
