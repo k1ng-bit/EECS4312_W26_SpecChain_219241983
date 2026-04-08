@@ -2,24 +2,24 @@
   "personas": [
     {
       "id": "P1",
-      "name": "Engaged and Hopeful User",
-      "description": "A user who actively uses the app to track their mood and emotions, and finds it helpful in managing their mental health.",
+      "name": "Engaged Tracker",
+      "description": "A motivated user who regularly tracks their mood and emotions to gain insights and improve their mental health.",
       "derived_from_group": "A1",
       "goals": [
-        "to understand and manage their mental health",
-        "to track their emotions and moods"
+        "understand and manage emotions",
+        "track progress and patterns"
       ],
       "pain_points": [
         "limited free features",
-        "technical issues"
+        "occasional technical issues"
       ],
       "context": [
-        "has a mental health condition",
-        "is looking for a tool to help them manage their emotions"
+        "therapist or doctor recommended",
+        "active on social media"
       ],
       "constraints": [
-        "may not have a lot of money to spend on premium features",
-        "may experience technical issues"
+        "limited financial resources",
+        "values data privacy"
       ],
       "evidence_reviews": [
         506,
@@ -28,24 +28,24 @@
     },
     {
       "id": "P2",
-      "name": "Frustrated Technical User",
-      "description": "A user who experiences technical issues with the app and is frustrated with the limitations of the free version.",
+      "name": "Frustrated User",
+      "description": "A user who experiences technical issues and frustrations with the app, impacting their ability to track their mood and emotions.",
       "derived_from_group": "A2",
       "goals": [
-        "to use the app without technical issues",
-        "to access premium features without paying"
+        "resolve technical issues",
+        "easily track emotions"
       ],
       "pain_points": [
         "app crashes",
-        "limited free features"
+        "notifications not working"
       ],
       "context": [
-        "is tech-savvy",
-        "is frustrated with technical issues"
+        "busy schedule",
+        "tech-savvy"
       ],
       "constraints": [
-        "may not have a lot of patience for technical issues",
-        "may not want to pay for premium features"
+        "limited patience for troubleshooting",
+        "values ease of use"
       ],
       "evidence_reviews": [
         429,
@@ -54,80 +54,80 @@
     },
     {
       "id": "P3",
-      "name": "Critical and Skeptical User",
-      "description": "A user who is skeptical of the app's ability to evaluate mental health and may not find it useful.",
-      "derived_from_group": "A5",
+      "name": "Skeptical Mind",
+      "description": "A user who is skeptical about the app's effectiveness and may have concerns about its credibility.",
+      "derived_from_group": "A3",
       "goals": [
-        "to find a reliable and trustworthy mental health tool",
-        "to understand their mental health"
+        "validate the app's claims",
+        "understand its limitations"
       ],
       "pain_points": [
-        "limited features",
-        "may not trust the app"
+        "doubts about accuracy",
+        "concerns about bias"
       ],
       "context": [
-        "may have had negative experiences with mental health tools",
-        "is skeptical of the app's claims"
+        "research-oriented",
+        "values scientific evidence"
       ],
       "constraints": [
-        "may not be willing to pay for premium features",
-        "may not trust the app"
+        "limited trust in apps",
+        "values expert opinions"
       ],
       "evidence_reviews": [
         1004,
-        147
+        117
       ]
     },
     {
       "id": "P4",
-      "name": "Mental Health Journeyer",
-      "description": "A user who is on a mental health journey and is using the app to track their emotions and moods.",
+      "name": "Value-Conscious User",
+      "description": "A user who is concerned about the app's payment and subscription model, seeking value for their money.",
       "derived_from_group": "A4",
       "goals": [
-        "to understand and manage their mental health",
-        "to track their emotions and moods"
+        "get the most out of the app",
+        "avoid unnecessary expenses"
       ],
       "pain_points": [
-        "may experience technical issues",
-        "limited free features"
+        "limited free features",
+        "concerns about cost"
       ],
       "context": [
-        "is on a mental health journey",
-        "is looking for a tool to help them manage their emotions"
+        "budget-conscious",
+        "values affordability"
       ],
       "constraints": [
-        "may not have a lot of money to spend on premium features",
-        "may experience technical issues"
+        "limited financial resources",
+        "values transparency"
       ],
       "evidence_reviews": [
-        401,
-        1714
+        985,
+        2722
       ]
     },
     {
       "id": "P5",
-      "name": "Limited Feature Seeker",
-      "description": "A user who is looking for a mental health tool with more features and is limited by the app's free version.",
-      "derived_from_group": "A3",
+      "name": "Newbie",
+      "description": "A new user who is cautiously exploring the app and its features.",
+      "derived_from_group": "A5",
       "goals": [
-        "to find a mental health tool with more features",
-        "to understand their mental health"
+        "understand the app's features",
+        "start tracking emotions"
       ],
       "pain_points": [
-        "limited features",
-        "may not trust the app"
+        "overwhelmed by features",
+        "uncertain about usage"
       ],
       "context": [
-        "may have had negative experiences with mental health tools",
-        "is looking for a tool with more features"
+        "new to mood tracking",
+        "values simplicity"
       ],
       "constraints": [
-        "may not be willing to pay for premium features",
-        "may not trust the app"
+        "limited experience with apps",
+        "values user-friendly interface"
       ],
       "evidence_reviews": [
-        117,
-        2886
+        138,
+        626
       ]
     }
   ]

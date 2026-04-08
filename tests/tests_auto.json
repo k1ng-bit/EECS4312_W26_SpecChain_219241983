@@ -2,117 +2,110 @@
   "tests": [
     {
       "test_id": "T_auto_1",
-      "requirement_id": "FR_auto_1",
-      "scenario": "Track emotions and moods",
+      "requirement_id": "FR1",
+      "scenario": "Track mood and emotions",
       "steps": [
-        "Log in as a user",
+        "Log in to the app",
         "Navigate to the tracking section",
-        "Select and record current emotions and moods"
+        "Select a mood and emotions from the predefined list"
       ],
-      "expected_result": "Emotions and moods are recorded successfully"
+      "expected_result": "The selected mood and emotions are saved successfully"
     },
     {
       "test_id": "T_auto_2",
-      "requirement_id": "FR_auto_2",
-      "scenario": "View summary of tracked emotions and moods",
+      "requirement_id": "FR2",
+      "scenario": "View weekly summary",
       "steps": [
-        "Log in as a user",
-        "Track emotions and moods over time",
-        "Navigate to the summary section",
-        "View graphical representation of tracked data"
+        "Log in to the app",
+        "Track mood and emotions for at least 7 days",
+        "Navigate to the insights section"
       ],
-      "expected_result": "Graphical representation of tracked data is displayed"
+      "expected_result": "A weekly summary of tracking data is displayed"
     },
     {
       "test_id": "T_auto_3",
-      "requirement_id": "FR_auto_3",
-      "scenario": "Access premium features with subscription",
+      "requirement_id": "FR3",
+      "scenario": "Receive daily reminder",
       "steps": [
-        "Log in as a user with a subscription",
-        "Navigate to the premium features section",
-        "Verify access to all premium features"
+        "Log in to the app",
+        "Enable daily reminders",
+        "Wait for the daily reminder time to reach"
       ],
-      "expected_result": "All premium features are accessible without restrictions"
+      "expected_result": "A notification to track mood and emotions is received"
     },
     {
       "test_id": "T_auto_4",
-      "requirement_id": "FR_auto_4",
-      "scenario": "Verify secure handling of user data",
+      "requirement_id": "FR4",
+      "scenario": "Verify data encryption",
       "steps": [
-        "Log in as a user",
-        "Collect user data",
-        "Verify data encryption and storage in accordance with regulations"
+        "Log in to the app",
+        "Track mood and emotions",
+        "Verify that data is encrypted and anonymized"
       ],
-      "expected_result": "User data is encrypted and stored securely"
+      "expected_result": "Data is encrypted and anonymized successfully"
     },
     {
       "test_id": "T_auto_5",
-      "requirement_id": "FR_auto_5",
-      "scenario": "View personalized recommendations",
+      "requirement_id": "FR5",
+      "scenario": "View payment and subscription model",
       "steps": [
-        "Log in as a user",
-        "Track emotions and moods over time",
-        "Navigate to the recommendations section",
-        "View tailored suggestions for managing mental health"
+        "Log in to the app",
+        "Navigate to the payment or subscription page"
       ],
-      "expected_result": "Tailored suggestions for managing mental health are displayed"
+      "expected_result": "A clear breakdown of costs and features is displayed"
     },
     {
       "test_id": "T_auto_6",
-      "requirement_id": "FR_auto_6",
-      "scenario": "Set and track mental health goals",
+      "requirement_id": "FR6",
+      "scenario": "Access free trial or limited free features",
       "steps": [
-        "Log in as a user",
-        "Set a mental health goal",
-        "Navigate to the goal progress section",
-        "View progress towards achieving the goal"
+        "Sign up for the app",
+        "Verify access to free trial or limited free features"
       ],
-      "expected_result": "Progress towards achieving the goal is displayed"
+      "expected_result": "Free trial or limited free features are accessible for a specified period"
     },
     {
       "test_id": "T_auto_7",
-      "requirement_id": "FR_auto_7",
-      "scenario": "Access resources and support",
+      "requirement_id": "FR7",
+      "scenario": "Find expert opinions and scientific evidence",
       "steps": [
-        "Log in as a user",
-        "Navigate to the resources section",
-        "Verify access to a list of relevant resources and support"
+        "Log in to the app",
+        "Search for information on the app's credibility"
       ],
-      "expected_result": "List of relevant resources and support is displayed"
+      "expected_result": "Links to expert opinions and scientific studies are found"
     },
     {
       "test_id": "T_auto_8",
-      "requirement_id": "FR_auto_8",
-      "scenario": "Handle technical issues and errors",
+      "requirement_id": "FR8",
+      "scenario": "Navigate app's features",
       "steps": [
-        "Simulate a technical issue or error",
-        "Verify error message and redirection to support page"
+        "Complete an onboarding tutorial",
+        "Navigate to main features"
       ],
-      "expected_result": "Error message is displayed and user is redirected to support page"
+      "expected_result": "Main features and their purpose are understood"
     },
     {
       "test_id": "T_auto_9",
-      "requirement_id": "FR_auto_9",
-      "scenario": "Customize experience with preferences",
+      "requirement_id": "FR9",
+      "scenario": "Handle technical issues",
       "steps": [
-        "Log in as a user",
-        "Navigate to the preferences section",
-        "Make changes to preferences",
-        "Verify changes are saved and applied"
+        "Log in to the app",
+        "Simulate a technical issue",
+        "Report the issue"
       ],
-      "expected_result": "Changes to preferences are saved and applied"
+      "expected_result": "The issue is logged and addressed in a future update"
     },
     {
       "test_id": "T_auto_10",
-      "requirement_id": "FR_auto_10",
-      "scenario": "Export tracked data",
+      "requirement_id": "FR10",
+      "scenario": "Export tracking data",
       "steps": [
-        "Log in as a user",
-        "Track emotions and moods over time",
-        "Navigate to the export section",
-        "Export tracked data in a compatible format"
+        "Log in to the app",
+        "Track mood and emotions for at least 1 day",
+        "Navigate to the data export section",
+        "Export data in a commonly used format"
       ],
-      "expected_result": "Tracked data is exported successfully in a compatible format"
+      "expected_result": "Tracking data is exported successfully"
     }
   ]
 }

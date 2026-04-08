@@ -15,7 +15,7 @@ def clean_text(text):
 seen = set()
 cleaned = []
 
-with open('../data/reviews_raw.jsonl', 'r', encoding='utf-8') as f:
+with open('data/reviews_raw.jsonl', 'r', encoding='utf-8') as f:
     for line in f:
         data = json.loads(line)
         content = clean_text(data["content"])
@@ -32,7 +32,7 @@ with open('../data/reviews_raw.jsonl', 'r', encoding='utf-8') as f:
             "content": content
         })
 
-with open('../data/reviews_clean.jsonl', 'w', encoding='utf-8') as f:        #write cleaned reviews to reviews_clean.jsonl
+with open('data/reviews_clean.jsonl', 'w', encoding='utf-8') as f:        #write cleaned reviews to reviews_clean.jsonl
     for r in cleaned:
         json.dump(r, f)
         f.write("\n")

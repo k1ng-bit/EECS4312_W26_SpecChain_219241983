@@ -18,10 +18,10 @@
     "requirements_count": 10,
     "tests_count": 10,
     "traceability_links": 15,
-    "review_coverage": 0.0293,
+    "review_coverage": 0.029,
     "traceability_ratio": 1.0,
     "testability_rate": 1.0,
-    "ambiguity_ratio": 0.0
+    "ambiguity_ratio": 0.1
   },
   "hybrid": {
     "pipeline": "hybrid",
