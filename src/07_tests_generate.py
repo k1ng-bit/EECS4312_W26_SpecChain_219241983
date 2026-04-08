@@ -5,14 +5,14 @@ import re
 import json
 from groq import Groq
 
-MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
+MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"            #model name
 
-SPEC_IN = "spec/spec_auto.md"
-TESTS_OUT = "tests/tests_auto.json"
+SPEC_IN = "spec/spec_auto.md"                   # input file spec auto
+TESTS_OUT = "tests/tests_auto.json"             # output file tests
 
 os.makedirs("tests", exist_ok=True)
 
-def strip_code_fence(text):
+def strip_code_fence(text):                     # remove whitespaces and split text for formating
     text = text.strip()
     if text.startswith("```"):
         lines = text.splitlines()
@@ -23,21 +23,21 @@ def strip_code_fence(text):
         return "\n".join(lines).strip()
     return text
 
-def extract_requirement_ids(spec_text):
+def extract_requirement_ids(spec_text):                         
     return re.findall(r"# Requirement ID:\s*(FR\d+)", spec_text)
 
 def main():
-    if not os.environ.get("GROQ_API_KEY"):
+    if not os.environ.get("GROQ_API_KEY"):                          # error if no api key is present
         raise RuntimeError("GROQ_API_KEY is not set in the environment.")
 
-    with open(SPEC_IN, "r", encoding="utf-8") as f:
+    with open(SPEC_IN, "r", encoding="utf-8") as f:                     #open input file for reading
         spec_text = f.read()
 
     req_ids = extract_requirement_ids(spec_text)
     if not req_ids:
         raise RuntimeError("No requirement IDs found in spec_auto.md")
 
-    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))           # call groq and input prompts
 
     system_prompt = (
         "You are a software testing assistant. Return ONLY valid JSON."
@@ -82,7 +82,7 @@ Specification:
     content = strip_code_fence(completion.choices[0].message.content)
     tests_json = json.loads(content)
 
-    with open(TESTS_OUT, "w", encoding="utf-8") as f:
+    with open(TESTS_OUT, "w", encoding="utf-8") as f:           # write to output tests file
         json.dump(tests_json, f, indent=2)
 
     print(f"Saved {TESTS_OUT}")

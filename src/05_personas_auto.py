@@ -5,31 +5,31 @@ import json
 import random
 from groq import Groq
 
-MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
+MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"        #model as stated in the doc
 
-INPUT_FILE = "data/reviews_clean.jsonl"
-GROUPS_OUT = "data/review_groups_auto.json"
-PERSONAS_OUT = "personas/personas_auto.json"
-PROMPT_OUT = "prompts/prompt_auto.json"
+INPUT_FILE = "data/reviews_clean.jsonl"                         # input file 
+GROUPS_OUT = "data/review_groups_auto.json"                     # groups output into file
+PERSONAS_OUT = "personas/personas_auto.json"                    # persona output file
+PROMPT_OUT = "prompts/prompt_auto.json"                         # prompts output file
 
 os.makedirs("data", exist_ok=True)
 os.makedirs("personas", exist_ok=True)
 os.makedirs("prompts", exist_ok=True)
 
 def load_reviews(path):
-    reviews = []
+    reviews = []                                        #store the clean reviews
     with open(path, "r", encoding="utf-8") as f:
         for line in f:
             reviews.append(json.loads(line))
     return reviews
 
-def sample_reviews(reviews, n=500, seed=42):
+def sample_reviews(reviews, n=500, seed=42):        #randomly sample any n reviews
     random.seed(seed)
     if len(reviews) <= n:
         return reviews
     return random.sample(reviews, n)
 
-def strip_code_fence(text):
+def strip_code_fence(text):                     #remove whitespaces and split output in lines
     text = text.strip()
     if text.startswith("```"):
         lines = text.splitlines()
@@ -37,13 +37,13 @@ def strip_code_fence(text):
             lines = lines[1:]
         if lines and lines[-1].strip().startswith("```"):
             lines = lines[:-1]
-        return "\n".join(lines).strip()
+        return "\n".join(lines).strip()             #return the text
     return text
 
-def call_groq_json(system_prompt, user_prompt):
-    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-    completion = client.chat.completions.create(
-        model=MODEL_NAME,
+def call_groq_json(system_prompt, user_prompt):             # access groq
+    client = Groq(api_key=os.environ.get("GROQ_API_KEY"))   # get the API KEy for groq
+    completion = client.chat.completions.create(            
+        model=MODEL_NAME,               #model llama-4-scout-17b-16e-instruct
         temperature=0.2,
         messages=[
             {"role": "system", "content": system_prompt},
@@ -55,7 +55,7 @@ def call_groq_json(system_prompt, user_prompt):
     return json.loads(content), content
 
 def main():
-    if not os.environ.get("GROQ_API_KEY"):
+    if not os.environ.get("GROQ_API_KEY"):                  #error is no api key present
         raise RuntimeError("GROQ_API_KEY is not set in the environment.")
 
     reviews = load_reviews(INPUT_FILE)
@@ -67,12 +67,12 @@ def main():
     ])
 
     system_prompt = (
-        "You are a software requirements engineering assistant. "
+        "You are a software requirements engineering assistant. "       #background prompt for the model to make sure it knows how to reply
         "Return ONLY valid JSON with no explanation."
     )
-
-    user_prompt = f"""
-Using the cleaned user reviews below for the MindDoc app, do two tasks:
+    #actual prompt to automate the group and persona creation
+    user_prompt = f"""                                                          
+Using the cleaned user reviews below for the MindDoc app, do two tasks:          
 
 1. Create exactly 5 review groups.
 2. Create exactly 5 personas, one derived from each review group.
@@ -118,13 +118,13 @@ Reviews:
 
     result, raw_response = call_groq_json(system_prompt, user_prompt)
 
-    with open(GROUPS_OUT, "w", encoding="utf-8") as f:
+    with open(GROUPS_OUT, "w", encoding="utf-8") as f:                  #save groups into the groups_out file
         json.dump({"groups": result["groups"]}, f, indent=2)
 
-    with open(PERSONAS_OUT, "w", encoding="utf-8") as f:
+    with open(PERSONAS_OUT, "w", encoding="utf-8") as f:                #save personas into personas_out file
         json.dump({"personas": result["personas"]}, f, indent=2)
 
-    with open(PROMPT_OUT, "w", encoding="utf-8") as f:
+    with open(PROMPT_OUT, "w", encoding="utf-8") as f:                  # save to prompt_out file
         json.dump({
             "model": MODEL_NAME,
             "system_prompt": system_prompt,

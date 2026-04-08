@@ -1,20 +1,11 @@
 # EECS4312_W26_SpecChain
 
-## instructions:
-Please update to include: 
-- App name
-- Data collection method
-- Original dataset
-- Final cleaned dataset
-- Exact commands to run pipeline
-
-# example
-Application: [Calm]
+Application: [Mind Doc]
 
 Dataset:
-- reviews_raw.jsonl contains the collected reviews.
-- reviews_clean.jsonl contains the cleaned dataset.
-- The cleaned dataset contains 842 reviews.
+- reviews_raw.jsonl contains the Original dataset with 3500 collected reviews.
+- reviews_clean.jsonl contains the Final Cleaned dataset.
+- The cleaned dataset contains 3173 reviews.
 
 Repository Structure:
 - data/ contains datasets and review groups
@@ -27,7 +18,6 @@ Repository Structure:
 
 How to Run:
 1. python src/00_validate_repo.py
-2. python src/02_clean.py
-3. python src/run_all.py
-4. Open metrics/metrics_summary.json for comparison results
+2. python src/run_all.py (Make sure to add API KEY for successful run)
+3. Open metrics/metrics_summary.json for comparison results
 

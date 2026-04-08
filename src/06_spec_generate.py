@@ -4,14 +4,14 @@ import os
 import json
 from groq import Groq
 
-MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
+MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"        #model
 
-PERSONAS_IN = "personas/personas_auto.json"
-SPEC_OUT = "spec/spec_auto.md"
+PERSONAS_IN = "personas/personas_auto.json"                 # input persona file
+SPEC_OUT = "spec/spec_auto.md"                              # output spec file
 
 os.makedirs("spec", exist_ok=True)
 
-def strip_code_fence(text):
+def strip_code_fence(text):                     #remove whitespaces and split 
     text = text.strip()
     if text.startswith("```"):
         lines = text.splitlines()
@@ -24,9 +24,9 @@ def strip_code_fence(text):
 
 def main():
     if not os.environ.get("GROQ_API_KEY"):
-        raise RuntimeError("GROQ_API_KEY is not set in the environment.")
+        raise RuntimeError("GROQ_API_KEY is not set in the environment.")       #error incase no api key present
 
-    with open(PERSONAS_IN, "r", encoding="utf-8") as f:
+    with open(PERSONAS_IN, "r", encoding="utf-8") as f:                 # open the input file to read
         personas = json.load(f)
 
     personas_text = json.dumps(personas, indent=2)
@@ -72,7 +72,7 @@ Personas:
 
     content = strip_code_fence(completion.choices[0].message.content)
 
-    with open(SPEC_OUT, "w", encoding="utf-8") as f:
+    with open(SPEC_OUT, "w", encoding="utf-8") as f:                #write to spec out 
         f.write(content)
 
     print(f"Saved {SPEC_OUT}")
