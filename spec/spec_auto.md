@@ -1,59 +1,59 @@
 # Requirement ID: FR1
-- Description: The system shall allow users to track their mood and emotions on a daily basis.
-- Source Persona: Engaged Tracker
+- Description: The system shall allow users to create and edit their emotional state entries with a minimum of 5 predefined emotions.
+- Source Persona: Engaged and Motivated
 - Traceability: Derived from review group A1
-- Acceptance Criteria: Given the user is logged in, When they navigate to the tracking section, Then they can select their current mood and emotions from a predefined list.
+- Acceptance Criteria: Given a user is logged in, when they navigate to the emotional state tracking section, then they can create a new entry with at least 5 predefined emotions and edit existing entries.
 
 # Requirement ID: FR2
-- Description: The system shall provide users with a weekly summary of their mood and emotion tracking data.
-- Source Persona: Engaged Tracker
+- Description: The system shall provide users with a dashboard to view their mental health progress over a period of at least 30 days.
+- Source Persona: Engaged and Motivated
 - Traceability: Derived from review group A1
-- Acceptance Criteria: Given the user has tracked their mood and emotions for at least 7 days, When they navigate to the insights section, Then they can view a weekly summary of their tracking data.
+- Acceptance Criteria: Given a user has logged at least 30 days of emotional state entries, when they navigate to the dashboard, then they can view their progress over the last 30 days.
 
 # Requirement ID: FR3
-- Description: The system shall send users a daily reminder to track their mood and emotions.
+- Description: The system shall allow users to export their emotional state entries in a CSV file.
 - Source Persona: Frustrated User
 - Traceability: Derived from review group A2
-- Acceptance Criteria: Given the user has enabled reminders, When the daily reminder time is reached, Then the user receives a notification to track their mood and emotions.
+- Acceptance Criteria: Given a user has logged emotional state entries, when they navigate to the settings section, then they can export their entries in a CSV file.
 
 # Requirement ID: FR4
-- Description: The system shall handle user data in a way that ensures data privacy and security.
-- Source Persona: Engaged Tracker
-- Traceability: Derived from review group A1
-- Acceptance Criteria: Given user data is collected, When it is stored or transmitted, Then it is encrypted and anonymized to protect user privacy.
-
-# Requirement ID: FR5
-- Description: The system shall provide users with a clear and transparent payment and subscription model.
-- Source Persona: Value-Conscious User
-- Traceability: Derived from review group A4
-- Acceptance Criteria: Given the user is on the payment or subscription page, When they view the pricing information, Then they can see a clear breakdown of the costs and features included.
-
-# Requirement ID: FR6
-- Description: The system shall offer a free trial or limited free features for new users.
-- Source Persona: Value-Conscious User
-- Traceability: Derived from review group A4
-- Acceptance Criteria: Given the user is new to the app, When they sign up, Then they can access a free trial or limited free features for a specified period.
-
-# Requirement ID: FR7
-- Description: The system shall provide users with access to expert opinions and scientific evidence supporting the app's claims.
-- Source Persona: Skeptical Mind
-- Traceability: Derived from review group A3
-- Acceptance Criteria: Given the user is on the app's website or within the app, When they search for information on the app's credibility, Then they can find links to expert opinions and scientific studies.
-
-# Requirement ID: FR8
-- Description: The system shall have a user-friendly interface that allows new users to easily navigate and understand the app's features.
-- Source Persona: Newbie
-- Traceability: Derived from review group A5
-- Acceptance Criteria: Given the user is new to the app, When they complete an onboarding tutorial, Then they can navigate to the main features and understand their purpose.
-
-# Requirement ID: FR9
-- Description: The system shall handle technical issues and crashes in a way that minimizes user disruption.
+- Description: The system shall have a response time of less than 2 seconds for 90% of user interactions.
 - Source Persona: Frustrated User
 - Traceability: Derived from review group A2
-- Acceptance Criteria: Given the app encounters a technical issue, When the user reports the issue, Then the issue is logged and addressed in a future update.
+- Acceptance Criteria: Given a user is interacting with the system, when they perform an action, then the system responds within 2 seconds for at least 90% of interactions.
+
+# Requirement ID: FR5
+- Description: The system shall provide users with a secure login process using two-factor authentication.
+- Source Persona: Skeptical and Critical
+- Traceability: Derived from review group A3
+- Acceptance Criteria: Given a user is attempting to log in, when they enter their credentials, then the system requests a verification code for two-factor authentication.
+
+# Requirement ID: FR6
+- Description: The system shall clearly communicate its data sharing and security policies to users.
+- Source Persona: Skeptical and Critical
+- Traceability: Derived from review group A3
+- Acceptance Criteria: Given a user is navigating the system, when they access the settings or help section, then they can find clear information about data sharing and security policies.
+
+# Requirement ID: FR7
+- Description: The system shall send users a weekly summary of their emotional state entries via email.
+- Source Persona: Casual and Interested
+- Traceability: Derived from review group A4
+- Acceptance Criteria: Given a user has logged emotional state entries, when the system generates a weekly summary, then the user receives an email with their summary.
+
+# Requirement ID: FR8
+- Description: The system shall offer a free version with at least 30 days of emotional state tracking.
+- Source Persona: Value-Conscious
+- Traceability: Derived from review group A5
+- Acceptance Criteria: Given a new user signs up, when they choose the free version, then they can track their emotional state for at least 30 days without paying.
+
+# Requirement ID: FR9
+- Description: The system shall provide users with personalized recommendations for improving their mental health based on their emotional state entries.
+- Source Persona: Engaged and Motivated
+- Traceability: Derived from review group A1
+- Acceptance Criteria: Given a user has logged emotional state entries, when they navigate to the recommendations section, then they receive personalized recommendations.
 
 # Requirement ID: FR10
-- Description: The system shall allow users to export their tracking data for personal use or to share with a therapist or doctor.
-- Source Persona: Engaged Tracker
+- Description: The system shall allow users to set and track mental health goals with a minimum of 3 goal templates.
+- Source Persona: Engaged and Motivated
 - Traceability: Derived from review group A1
-- Acceptance Criteria: Given the user has tracked their mood and emotions for at least 1 day, When they navigate to the data export section, Then they can export their data in a commonly used format.
+- Acceptance Criteria: Given a user is logged in, when they navigate to the goal setting section, then they can set and track mental health goals using at least 3 goal templates.

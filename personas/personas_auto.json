@@ -2,24 +2,24 @@
   "personas": [
     {
       "id": "P1",
-      "name": "Engaged Tracker",
-      "description": "A motivated user who regularly tracks their mood and emotions to gain insights and improve their mental health.",
+      "name": "Engaged and Motivated",
+      "description": "Actively seeks mental health support and tracking",
       "derived_from_group": "A1",
       "goals": [
         "understand and manage emotions",
-        "track progress and patterns"
+        "track mental health progress"
       ],
       "pain_points": [
         "limited free features",
         "occasional technical issues"
       ],
       "context": [
-        "therapist or doctor recommended",
-        "active on social media"
+        "has a therapist or mental health professional",
+        "values self-awareness and personal growth"
       ],
       "constraints": [
-        "limited financial resources",
-        "values data privacy"
+        "may have limited financial resources",
+        "values ease of use and accessibility"
       ],
       "evidence_reviews": [
         506,
@@ -29,23 +29,23 @@
     {
       "id": "P2",
       "name": "Frustrated User",
-      "description": "A user who experiences technical issues and frustrations with the app, impacting their ability to track their mood and emotions.",
+      "description": "Experiences technical issues and frustration with the app",
       "derived_from_group": "A2",
       "goals": [
         "resolve technical issues",
-        "easily track emotions"
+        "effectively track mental health"
       ],
       "pain_points": [
-        "app crashes",
-        "notifications not working"
+        "frequent app crashes",
+        "difficulty with logging and tracking"
       ],
       "context": [
-        "busy schedule",
-        "tech-savvy"
+        "may have limited technical expertise",
+        "values reliability and consistency"
       ],
       "constraints": [
         "limited patience for troubleshooting",
-        "values ease of use"
+        "may have limited financial resources"
       ],
       "evidence_reviews": [
         429,
@@ -54,24 +54,24 @@
     },
     {
       "id": "P3",
-      "name": "Skeptical Mind",
-      "description": "A user who is skeptical about the app's effectiveness and may have concerns about its credibility.",
+      "name": "Skeptical and Critical",
+      "description": "Questions the app's credibility and effectiveness",
       "derived_from_group": "A3",
       "goals": [
-        "validate the app's claims",
-        "understand its limitations"
+        "validate the app's claims and benefits",
+        "find alternative solutions"
       ],
       "pain_points": [
-        "doubts about accuracy",
-        "concerns about bias"
+        "concerns about data sharing and security",
+        "limited features and functionality"
       ],
       "context": [
-        "research-oriented",
-        "values scientific evidence"
+        "may have had negative experiences with mental health services",
+        "values transparency and accountability"
       ],
       "constraints": [
-        "limited trust in apps",
-        "values expert opinions"
+        "limited trust in digital solutions",
+        "may have limited knowledge of mental health resources"
       ],
       "evidence_reviews": [
         1004,
@@ -80,54 +80,54 @@
     },
     {
       "id": "P4",
-      "name": "Value-Conscious User",
-      "description": "A user who is concerned about the app's payment and subscription model, seeking value for their money.",
+      "name": "Casual and Interested",
+      "description": "Interested in mental health tracking but not actively engaged",
       "derived_from_group": "A4",
       "goals": [
-        "get the most out of the app",
-        "avoid unnecessary expenses"
+        "explore mental health tracking options",
+        "gain insights into emotions and behaviors"
       ],
       "pain_points": [
-        "limited free features",
-        "concerns about cost"
+        "limited motivation to track mental health",
+        "difficulty with consistent use"
       ],
       "context": [
-        "budget-conscious",
-        "values affordability"
+        "may have limited knowledge of mental health resources",
+        "values ease of use and accessibility"
       ],
       "constraints": [
-        "limited financial resources",
-        "values transparency"
+        "limited time and effort for tracking",
+        "may have competing priorities"
       ],
       "evidence_reviews": [
-        985,
-        2722
+        2886,
+        124
       ]
     },
     {
       "id": "P5",
-      "name": "Newbie",
-      "description": "A new user who is cautiously exploring the app and its features.",
+      "name": "Value-Conscious",
+      "description": "Seeks value and effectiveness in mental health tracking",
       "derived_from_group": "A5",
       "goals": [
-        "understand the app's features",
-        "start tracking emotions"
+        "find a cost-effective mental health tracking solution",
+        "gain insights into emotions and behaviors"
       ],
       "pain_points": [
-        "overwhelmed by features",
-        "uncertain about usage"
+        "limited free features",
+        "concerns about subscription costs"
       ],
       "context": [
-        "new to mood tracking",
-        "values simplicity"
+        "may have limited financial resources",
+        "values cost-effectiveness and value"
       ],
       "constraints": [
-        "limited experience with apps",
-        "values user-friendly interface"
+        "limited budget for mental health services",
+        "may have limited knowledge of mental health resources"
       ],
       "evidence_reviews": [
-        138,
-        626
+        1231,
+        3350
       ]
     }
   ]

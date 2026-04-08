@@ -2,55 +2,42 @@
 import os
 import sys
 
-def run_step(command, description):
-    print(f"\n=== {description} ===")
+def run_step(command, description):             # the run step function to run the file
+    print(f"\n - {description} ")
     exit_code = os.system(command)
     if exit_code != 0:
-        print(f"\nERROR: failed: {description}")
+        print(f"\nERROR: {description}")        #if error takes place, print the error message
         print(f"Command: {command}")
         sys.exit(1)
 
 def main():
     print("Starting automated pipeline...\n")
 
-    # Step 1: Collect or import raw reviews
-    # Produces: data/reviews_raw.jsonl
-    run_step("py src/01_collect_or_import.py", "Step 1 - Collect or import raw reviews")
+    # Run src/01_collect_or_import.py. It outputs the Raw review data.
+    run_step("py src/01_collect_or_import.py", "Collecting or importing raw reviews")
 
-    # Step 2: Clean raw reviews
-    # Produces: data/reviews_clean.jsonl
-    run_step("py src/02_clean.py", "Step 2 - Clean raw reviews")
+    # Run src/ 02_clean.py . This outputs the cleaned review data.
+    run_step("py src/02_clean.py", "Cleaning raw reviews")
 
-    # Step 3 onward needs Groq API key
+    # Making sure the API KEY is set so that the files run successfuly for the auto pipeline
     if not os.environ.get("GROQ_API_KEY"):
-        print("ERROR: GROQ_API_KEY is not set in the environment.")
-        print("Set it first, then rerun: $env:GROQ_API_KEY=\"your_key_here\"")
+        print("ERROR: GROQ_API_KEY is not set in the environment.")         #print error incase api key not set
+        print("Set API KEY using $env:GROQ_API_KEY=\"your_key_here\" and rerun run_all.py " ) 
         sys.exit(1)
 
-    # Step 3: Generate automated review groups and personas
-    # Produces:
-    # - data/review_groups_auto.json
-    # - personas/personas_auto.json
-    # - prompts/prompt_auto.json
-    run_step("py src/05_personas_auto.py", "Step 3 - Generate automated review groups and personas")
+    # Run 05_personas_auto.py to automatically generate the Personas for the automated pipeline
+    run_step("py src/05_personas_auto.py", "Generating automated review groups and personas")
 
-    # Step 4: Generate automated specification
-    # Produces: spec/spec_auto.md
-    run_step("py src/06_spec_generate.py", "Step 4 - Generate automated specification")
+    # Run 06_spec_generate.py to automatically generate the spec documentation for the automated pipleline
+    run_step("py src/06_spec_generate.py", "Generating automated specification")
 
-    # Step 5: Generate automated tests
-    # Produces: tests/tests_auto.json
-    run_step("py src/07_tests_generate.py", "Step 5 - Generate automated tests")
+    # Run 07_tests_generate.py to automatically generate the tests for teh automated pipeling
+    run_step("py src/07_tests_generate.py", "Generating automated tests")
 
-    # Step 6: Compute metrics
-    # Produces:
-    # - metrics/metrics_manual.json
-    # - metrics/metrics_auto.json
-    # - metrics/metrics_hybrid.json
-    # - metrics/metrics_summary.json
-    run_step("py src/08_metrics.py", "Step 6 - Compute metrics")
+    # Run the metrics.py script to generate the metrics for auto pipleling and update summary
+    run_step("py src/08_metrics.py", "Computing all metrics")
 
-    print("\nAutomated pipeline completed successfully.")
+    print("\nAutomated pipeline generation complete.")          #message when generated successfuly
 
 if __name__ == "__main__":
     main()

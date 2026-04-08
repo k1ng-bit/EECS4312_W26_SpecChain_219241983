@@ -3,109 +3,113 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "FR1",
-      "scenario": "Track mood and emotions",
+      "scenario": "Create and edit emotional state entries",
       "steps": [
-        "Log in to the app",
-        "Navigate to the tracking section",
-        "Select a mood and emotions from the predefined list"
+        "Log in as a user",
+        "Navigate to the emotional state tracking section",
+        "Create a new entry with a predefined emotion",
+        "Edit an existing entry"
       ],
-      "expected_result": "The selected mood and emotions are saved successfully"
+      "expected_result": "The system allows creating and editing emotional state entries with at least 5 predefined emotions."
     },
     {
       "test_id": "T_auto_2",
       "requirement_id": "FR2",
-      "scenario": "View weekly summary",
+      "scenario": "View mental health progress on the dashboard",
       "steps": [
-        "Log in to the app",
-        "Track mood and emotions for at least 7 days",
-        "Navigate to the insights section"
+        "Log in as a user with at least 30 days of emotional state entries",
+        "Navigate to the dashboard",
+        "Verify progress over the last 30 days"
       ],
-      "expected_result": "A weekly summary of tracking data is displayed"
+      "expected_result": "The system displays the user's mental health progress over the last 30 days."
     },
     {
       "test_id": "T_auto_3",
       "requirement_id": "FR3",
-      "scenario": "Receive daily reminder",
+      "scenario": "Export emotional state entries to CSV",
       "steps": [
-        "Log in to the app",
-        "Enable daily reminders",
-        "Wait for the daily reminder time to reach"
+        "Log in as a user with emotional state entries",
+        "Navigate to the settings section",
+        "Export entries to a CSV file"
       ],
-      "expected_result": "A notification to track mood and emotions is received"
+      "expected_result": "The system exports the user's emotional state entries to a CSV file."
     },
     {
       "test_id": "T_auto_4",
       "requirement_id": "FR4",
-      "scenario": "Verify data encryption",
+      "scenario": "Verify system response time",
       "steps": [
-        "Log in to the app",
-        "Track mood and emotions",
-        "Verify that data is encrypted and anonymized"
+        "Log in as a user",
+        "Perform multiple actions on the system",
+        "Measure the response time for each action"
       ],
-      "expected_result": "Data is encrypted and anonymized successfully"
+      "expected_result": "The system responds within 2 seconds for at least 90% of user interactions."
     },
     {
       "test_id": "T_auto_5",
       "requirement_id": "FR5",
-      "scenario": "View payment and subscription model",
+      "scenario": "Secure login with two-factor authentication",
       "steps": [
-        "Log in to the app",
-        "Navigate to the payment or subscription page"
+        "Attempt to log in as a user",
+        "Enter login credentials",
+        "Verify two-factor authentication request"
       ],
-      "expected_result": "A clear breakdown of costs and features is displayed"
+      "expected_result": "The system requests a verification code for two-factor authentication."
     },
     {
       "test_id": "T_auto_6",
       "requirement_id": "FR6",
-      "scenario": "Access free trial or limited free features",
+      "scenario": "Verify data sharing and security policies",
       "steps": [
-        "Sign up for the app",
-        "Verify access to free trial or limited free features"
+        "Log in as a user",
+        "Navigate to the settings or help section",
+        "Verify clear information about data sharing and security policies"
       ],
-      "expected_result": "Free trial or limited free features are accessible for a specified period"
+      "expected_result": "The system clearly communicates its data sharing and security policies to users."
     },
     {
       "test_id": "T_auto_7",
       "requirement_id": "FR7",
-      "scenario": "Find expert opinions and scientific evidence",
+      "scenario": "Receive weekly summary via email",
       "steps": [
-        "Log in to the app",
-        "Search for information on the app's credibility"
+        "Log in as a user with emotional state entries",
+        "Generate a weekly summary",
+        "Verify receipt of the summary via email"
       ],
-      "expected_result": "Links to expert opinions and scientific studies are found"
+      "expected_result": "The system sends a weekly summary of emotional state entries to the user via email."
     },
     {
       "test_id": "T_auto_8",
       "requirement_id": "FR8",
-      "scenario": "Navigate app's features",
+      "scenario": "Track emotional state for free",
       "steps": [
-        "Complete an onboarding tutorial",
-        "Navigate to main features"
+        "Sign up as a new user",
+        "Choose the free version",
+        "Verify ability to track emotional state for at least 30 days"
       ],
-      "expected_result": "Main features and their purpose are understood"
+      "expected_result": "The system allows tracking emotional state for at least 30 days without paying."
     },
     {
       "test_id": "T_auto_9",
       "requirement_id": "FR9",
-      "scenario": "Handle technical issues",
+      "scenario": "Receive personalized recommendations",
       "steps": [
-        "Log in to the app",
-        "Simulate a technical issue",
-        "Report the issue"
+        "Log in as a user with emotional state entries",
+        "Navigate to the recommendations section",
+        "Verify personalized recommendations"
       ],
-      "expected_result": "The issue is logged and addressed in a future update"
+      "expected_result": "The system provides personalized recommendations for improving mental health based on emotional state entries."
     },
     {
       "test_id": "T_auto_10",
       "requirement_id": "FR10",
-      "scenario": "Export tracking data",
+      "scenario": "Set and track mental health goals",
       "steps": [
-        "Log in to the app",
-        "Track mood and emotions for at least 1 day",
-        "Navigate to the data export section",
-        "Export data in a commonly used format"
+        "Log in as a user",
+        "Navigate to the goal setting section",
+        "Set and track mental health goals using at least 3 goal templates"
       ],
-      "expected_result": "Tracking data is exported successfully"
+      "expected_result": "The system allows setting and tracking mental health goals with at least 3 goal templates."
     }
   ]
 }
