@@ -2,7 +2,7 @@
   "tests": [
     {
       "test_id": "T_auto_1",
-      "requirement_id": "FR1",
+      "requirement_id": "FR_auto_1",
       "scenario": "Track emotions and moods",
       "steps": [
         "Log in as a user",
@@ -13,7 +13,7 @@
     },
     {
       "test_id": "T_auto_2",
-      "requirement_id": "FR2",
+      "requirement_id": "FR_auto_2",
       "scenario": "View summary of tracked emotions and moods",
       "steps": [
         "Log in as a user",
@@ -25,7 +25,7 @@
     },
     {
       "test_id": "T_auto_3",
-      "requirement_id": "FR3",
+      "requirement_id": "FR_auto_3",
       "scenario": "Access premium features with subscription",
       "steps": [
         "Log in as a user with a subscription",
@@ -36,7 +36,7 @@
     },
     {
       "test_id": "T_auto_4",
-      "requirement_id": "FR4",
+      "requirement_id": "FR_auto_4",
       "scenario": "Verify secure handling of user data",
       "steps": [
         "Log in as a user",
@@ -47,7 +47,7 @@
     },
     {
       "test_id": "T_auto_5",
-      "requirement_id": "FR5",
+      "requirement_id": "FR_auto_5",
       "scenario": "View personalized recommendations",
       "steps": [
         "Log in as a user",
@@ -59,7 +59,7 @@
     },
     {
       "test_id": "T_auto_6",
-      "requirement_id": "FR6",
+      "requirement_id": "FR_auto_6",
       "scenario": "Set and track mental health goals",
       "steps": [
         "Log in as a user",
@@ -71,7 +71,7 @@
     },
     {
       "test_id": "T_auto_7",
-      "requirement_id": "FR7",
+      "requirement_id": "FR_auto_7",
       "scenario": "Access resources and support",
       "steps": [
         "Log in as a user",
@@ -82,7 +82,7 @@
     },
     {
       "test_id": "T_auto_8",
-      "requirement_id": "FR8",
+      "requirement_id": "FR_auto_8",
       "scenario": "Handle technical issues and errors",
       "steps": [
         "Simulate a technical issue or error",
@@ -92,7 +92,7 @@
     },
     {
       "test_id": "T_auto_9",
-      "requirement_id": "FR9",
+      "requirement_id": "FR_auto_9",
       "scenario": "Customize experience with preferences",
       "steps": [
         "Log in as a user",
@@ -104,7 +104,7 @@
     },
     {
       "test_id": "T_auto_10",
-      "requirement_id": "FR10",
+      "requirement_id": "FR_auto_10",
       "scenario": "Export tracked data",
       "steps": [
         "Log in as a user",

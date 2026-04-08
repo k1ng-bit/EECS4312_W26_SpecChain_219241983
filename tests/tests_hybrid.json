@@ -3,14 +3,105 @@
     {
       "test_id": "T_hybrid_1",
       "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "scenario": "Record mood entry",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
-      ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+        "Open check in screen", 
+        "Select mood", 
+        "Submit entry"],
+      "expected_result": "Mood entry is saved successfully",
+      "notes": "Revised to align test structure with hybrid requirement format."
+    },
+    {
+      "test_id": "T_hybrid_2",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "View mood history",
+      "steps": [
+        "Open mood history"
+        ],
+      "expected_result": "Past entries are shown in chronological order",
+      "notes": "Clarified expected result to match hybrid requirement on chronological display."
+    },
+    {
+      "test_id": "T_hybrid_3",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "App launches",
+      "steps": [
+        "Launch app"
+        ],
+      "expected_result": "App loads without crashing",
+      "notes": "matched the scenario and result with hybrid requirement focusing on app reliability."
+    },
+    {
+      "test_id": "T_hybrid_4",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "user entries still saved after reopening the app",
+      "steps": [
+        "Create entry", 
+        "Close app", 
+        "Reopen app"
+        ],
+      "expected_result": "Entry is still available",
+      "notes": "Refined to properly test if entry has been saved or not."
+    },
+    {
+      "test_id": "T_hybrid_5",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Premium features identifiable",
+      "steps": [
+        "Open premium feature"
+        ],
+      "expected_result": "Feature is labeled premium",
+      "notes": "modified to make sure premium features are correctly presented."
+    },
+    {
+      "test_id": "T_hybrid_6",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Pricing information",
+      "steps": [
+        "Open subscription section"
+        ],
+      "expected_result": "Pricing information is visible",
+      "notes": "Updated to confirm pricing information before allowing to subscribe."
+    },
+    {
+      "test_id": "T_hybrid_7",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "View insights",
+      "steps": [
+        "Open insights section"
+        ],
+      "expected_result": "At least one insight is displayed",
+      "notes": "Revised to match hybrid requirement to allow insights."
+    },
+    {
+      "test_id": "T_hybrid_8",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Access support content",
+      "steps": [
+        "Open support section"
+        ],
+      "expected_result": "Support content is available",
+      "notes": "Adjusted to align with hybrid requirement ensuring access to support resources."
+    },
+    {
+      "test_id": "T_hybrid_9",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Privacy info shown",
+      "steps": [
+        "Start signup"
+        ],
+      "expected_result": "Privacy information is shown before data collection",
+      "notes": "Matching with the hybrid requirements to make sure user knows how sensitive information will be handled."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Support option types",
+      "steps": [
+        "Open support options"
+        ],
+      "expected_result": "At least one type of support option is available",
+      "notes": "updated to ensure that it is testable."
     }
   ]
 }

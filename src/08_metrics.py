@@ -48,16 +48,35 @@ def parse_requirements(spec_path):
     with open(spec_path, "r", encoding="utf-8") as f:
         text = f.read()
 
-    req_ids = re.findall(r"# Requirement ID:\s*(FR\d+)", text)
-    persona_refs = re.findall(r"- Source Persona:\s*\[(.*?)\]", text)
-    acceptance = re.findall(r"- Acceptance Criteria:\s*\[(.*?)\]", text)
+    # matches FR1, FR_auto_1, FR_hybrid_1, etc.
+    req_pattern = r'([A-Za-z][A-Za-z0-9_]*\d+)'
 
-    return {
-        "text": text,
-        "requirement_ids": req_ids,
-        "persona_refs": persona_refs,
-        "acceptance": acceptance
-    }
+    chunks = re.split(rf'(?=# Requirement ID:\s*{req_pattern})', text)
+    chunks = [c.strip() for c in chunks if c.strip().startswith("# Requirement ID:")]
+
+    requirements = []
+
+    for chunk in chunks:
+        req_id_match = re.search(rf"# Requirement ID:\s*{req_pattern}", chunk)
+        source_match = re.search(r"- Source Persona:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
+        trace_match = re.search(r"- Traceability:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
+        acc_match = re.search(r"- Acceptance Criteria:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
+
+        req_id = req_id_match.group(1).strip() if req_id_match else None
+        source = source_match.group(1).strip() if source_match else None
+        trace = trace_match.group(1).strip() if trace_match else None
+        acceptance = acc_match.group(1).strip() if acc_match else ""
+
+        if req_id:
+            requirements.append({
+                "id": req_id,
+                "source_persona": source,
+                "traceability": trace,
+                "acceptance": acceptance,
+                "chunk": chunk
+            })
+
+    return requirements
 
 def compute_metrics(pipeline_name):
     cfg = PIPELINES[pipeline_name]
@@ -67,14 +86,14 @@ def compute_metrics(pipeline_name):
     personas_json = load_json(cfg["personas"])
     groups_json = load_json(cfg["groups"])
     tests_json = load_json(cfg["tests"])
-    spec_data = parse_requirements(cfg["spec"])
+    requirements = parse_requirements(cfg["spec"])
 
     personas = personas_json.get("personas", [])
     groups = groups_json.get("groups", [])
     tests = tests_json.get("tests", [])
 
     persona_count = len(personas)
-    requirements_count = len(spec_data["requirement_ids"])
+    requirements_count = len(requirements)
     tests_count = len(tests)
 
     covered_review_ids = set()
@@ -84,32 +103,27 @@ def compute_metrics(pipeline_name):
 
     review_coverage = round(len(covered_review_ids) / dataset_size, 4) if dataset_size else 0.0
 
-    traceability_ratio = 1.0 if requirements_count > 0 and len(spec_data["persona_refs"]) == requirements_count else 0.0
+    traceable_requirements = 0
+    for req in requirements:
+        if req["source_persona"] and req["traceability"]:
+            traceable_requirements += 1
+
+    traceability_ratio = round(traceable_requirements / requirements_count, 4) if requirements_count else 0.0
 
     tested_requirements = {t.get("requirement_id") for t in tests}
-    req_set = set(spec_data["requirement_ids"])
-    testability_rate = round(len(req_set.intersection(tested_requirements)) / requirements_count, 4) if requirements_count else 0.0
+    req_ids = {r["id"] for r in requirements}
+    matched_tested = req_ids.intersection(tested_requirements)
+    testability_rate = round(len(matched_tested) / requirements_count, 4) if requirements_count else 0.0
 
     ambiguous_count = 0
-    all_acceptance = " ".join(spec_data["acceptance"]).lower()
-    text_lower = spec_data["text"].lower()
-    for req_id in spec_data["requirement_ids"]:
-        pass
-
-    # simple ambiguity scan, ratio by requirements
-    for req_id in spec_data["requirement_ids"]:
-        # approximate: count req ambiguous if any ambiguous word appears anywhere in spec
-        pattern = rf"# Requirement ID:\s*{req_id}(.*?)(?=# Requirement ID:|$)"
-        match = re.search(pattern, spec_data["text"], flags=re.DOTALL)
-        if match:
-            chunk = match.group(1).lower()
-            if any(w in chunk for w in AMBIGUOUS_WORDS):
-                ambiguous_count += 1
+    for req in requirements:
+        chunk_lower = req["chunk"].lower()
+        if any(word in chunk_lower for word in AMBIGUOUS_WORDS):
+            ambiguous_count += 1
 
     ambiguity_ratio = round(ambiguous_count / requirements_count, 4) if requirements_count else 0.0
 
-    # approximate traceability links:
-    traceability_links = persona_count + requirements_count
+    traceability_links = persona_count + traceable_requirements
 
     metrics = {
         "pipeline": pipeline_name,
