@@ -4,10 +4,10 @@ import os
 import re
 import json
 
-DATASET_FILE = "data/reviews_clean.jsonl"
+DATASET_FILE = "data/reviews_clean.jsonl"               # final clean review dataset file
 
 PIPELINES = {
-    "manual": {
+    "manual": {                                         #pipelines and files related to each
         "personas": "personas/personas_manual.json",
         "spec": "spec/spec_manual.md",
         "tests": "tests/tests_manual.json",
@@ -31,24 +31,24 @@ PIPELINES = {
 }
 
 AMBIGUOUS_WORDS = [
-    "fast", "easy", "better", "user-friendly", "simple", "quick", "effective"
+    "fast", "easy", "better", "user-friendly", "simple", "quick", "effective"           #ambiguous words for requirements
 ]
 
 os.makedirs("metrics", exist_ok=True)
 
 def line_count(path):
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, "r", encoding="utf-8") as f:                #read and count lines in dataset
         return sum(1 for _ in f)
 
-def load_json(path):
+def load_json(path):                                            #load file
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def parse_requirements(spec_path):
-    with open(spec_path, "r", encoding="utf-8") as f:
+    with open(spec_path, "r", encoding="utf-8") as f:                 
         text = f.read()
 
-    # matches FR1, FR_auto_1, FR_hybrid_1, etc.
+    # matches FR1, FR_auto_1, FR_hybrid_1 for all three pipelines
     req_pattern = r'([A-Za-z][A-Za-z0-9_]*\d+)'
 
     chunks = re.split(rf'(?=# Requirement ID:\s*{req_pattern})', text)
@@ -57,10 +57,10 @@ def parse_requirements(spec_path):
     requirements = []
 
     for chunk in chunks:
-        req_id_match = re.search(rf"# Requirement ID:\s*{req_pattern}", chunk)
-        source_match = re.search(r"- Source Persona:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
-        trace_match = re.search(r"- Traceability:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
-        acc_match = re.search(r"- Acceptance Criteria:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)
+        req_id_match = re.search(rf"# Requirement ID:\s*{req_pattern}", chunk)                              #read requirement id
+        source_match = re.search(r"- Source Persona:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)         #read persona source
+        trace_match = re.search(r"- Traceability:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)            #traceability 
+        acc_match = re.search(r"- Acceptance Criteria:\s*\[?(.*?)\]?\s*$", chunk, flags=re.MULTILINE)       # acceptance criteria
 
         req_id = req_id_match.group(1).strip() if req_id_match else None
         source = source_match.group(1).strip() if source_match else None
@@ -68,7 +68,7 @@ def parse_requirements(spec_path):
         acceptance = acc_match.group(1).strip() if acc_match else ""
 
         if req_id:
-            requirements.append({
+            requirements.append({                       #store the requirements extracted
                 "id": req_id,
                 "source_persona": source,
                 "traceability": trace,
@@ -78,21 +78,21 @@ def parse_requirements(spec_path):
 
     return requirements
 
-def compute_metrics(pipeline_name):
+def compute_metrics(pipeline_name):                 # function to compute the metrics
     cfg = PIPELINES[pipeline_name]
 
-    dataset_size = line_count(DATASET_FILE)
+    dataset_size = line_count(DATASET_FILE)         #number of reviews in data
 
-    personas_json = load_json(cfg["personas"])
+    personas_json = load_json(cfg["personas"])      # load input files
     groups_json = load_json(cfg["groups"])
     tests_json = load_json(cfg["tests"])
     requirements = parse_requirements(cfg["spec"])
 
-    personas = personas_json.get("personas", [])
+    personas = personas_json.get("personas", [])    # get lists
     groups = groups_json.get("groups", [])
     tests = tests_json.get("tests", [])
 
-    persona_count = len(personas)
+    persona_count = len(personas)                   #count
     requirements_count = len(requirements)
     tests_count = len(tests)
 
@@ -103,22 +103,22 @@ def compute_metrics(pipeline_name):
 
     review_coverage = round(len(covered_review_ids) / dataset_size, 4) if dataset_size else 0.0
 
-    traceable_requirements = 0
+    traceable_requirements = 0                      # calculate traceability
     for req in requirements:
-        if req["source_persona"] and req["traceability"]:
+        if req["source_persona"] and req["traceability"]:              # traceable if persona + trace link exists
             traceable_requirements += 1
 
-    traceability_ratio = round(traceable_requirements / requirements_count, 4) if requirements_count else 0.0
+    traceability_ratio = round(traceable_requirements / requirements_count, 4) if requirements_count else 0.0           # testability measure
 
     tested_requirements = {t.get("requirement_id") for t in tests}
     req_ids = {r["id"] for r in requirements}
     matched_tested = req_ids.intersection(tested_requirements)
     testability_rate = round(len(matched_tested) / requirements_count, 4) if requirements_count else 0.0
 
-    ambiguous_count = 0
+    ambiguous_count = 0                         #ambiguity count 
     for req in requirements:
         chunk_lower = req["chunk"].lower()
-        if any(word in chunk_lower for word in AMBIGUOUS_WORDS):
+        if any(word in chunk_lower for word in AMBIGUOUS_WORDS):            #if ambiguous words found
             ambiguous_count += 1
 
     ambiguity_ratio = round(ambiguous_count / requirements_count, 4) if requirements_count else 0.0
@@ -138,13 +138,13 @@ def compute_metrics(pipeline_name):
         "ambiguity_ratio": ambiguity_ratio
     }
 
-    with open(cfg["out"], "w", encoding="utf-8") as f:
+    with open(cfg["out"], "w", encoding="utf-8") as f:      # save the calculations in file
         json.dump(metrics, f, indent=2)
 
     print(f"Saved {cfg['out']}")
     return metrics
 
-def main():
+def main():                             # create metrics summary file
     summary = {}
     for name in ["manual", "auto", "hybrid"]:
         cfg = PIPELINES[name]
